@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: #222;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 10rem;
+}
+.header__container::after {
+  content: "";
+  position: absolute;
+  background-color: #a2a2a2;
+  height: 0.1rem;
+  width: calc(100% - 3rem);
+  left: 1.5rem;
+  bottom: 0;
+}
+.header__logo > img {
+  height: 4rem;
+}
+.header__nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header__burgerIcon {
+  color: #fff;
+  font-size: 2.2rem;
+}
+@media (min-width: 768px) {
+  .header__burgerIcon {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .header__burgerIcon:hover + .header__list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+  }
+}
+.header__list {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .header__list {
+    display: none;
+  }
+}
+.header__link {
+  padding: 4rem 1rem;
+  display: block;
+  font-size: 1.4rem;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  transition: 0.3s;
+}
+.header__link--active, .header__link:hover {
+  color: #19c8fa;
+  border-bottom: 0.1rem solid #19c8fa;
+}
+@media (max-width: 767px) {
+  .header__link {
+    padding: 1.5rem;
+  }
+}
+.header__search {
+  width: 4rem;
+  height: 3rem;
+  position: relative;
+  margin-left: 3rem;
+  border-left: 0.1rem solid #fff;
+}
+.header__search > i {
+  color: #fff;
+  position: absolute;
+  font-size: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}/*# sourceMappingURL=style.css.map */
