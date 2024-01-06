@@ -188,4 +188,86 @@
       }
     }
   }
+
+  &-portfolio {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+
+    &__list {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__listItem {
+      padding: 1rem;
+      text-transform: capitalize;
+
+      &--active {
+        color: $color-white;
+        background-color: $color-primary;
+      }
+    }
+
+    &__images-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 6rem;
+    }
+
+    &__box {
+      position: relative;
+      overflow: hidden;
+
+      @media (min-width: 768px) {
+        flex-basis: 50%;
+      }
+
+      @media (min-width: 1199px) {
+        flex-basis: 25%;
+      }
+
+      &:hover .section-portfolio__caption {
+        bottom: 0;
+      }
+
+      &:hover .section-portfolio__img {
+        transform: rotate(3deg) scale(1.1);
+      }
+    }
+    &__img {
+      max-width: 100%;
+      transition: $transition-duration;
+    }
+
+    &__caption {
+      position: absolute;
+      padding: 2rem;
+      background-color: $color-white;
+      width: 100%;
+      left: 0;
+      bottom: -100%;
+      transition: $transition-duration;
+    }
+
+    &__heading {
+      margin-bottom: 1rem;
+      font-weight: normal;
+      text-transform: capitalize;
+    }
+
+    &__description {
+      color: $color-primary;
+      text-transform: capitalize;
+    }
+
+    &__link {
+      color: $color-white;
+      background-color: $color-primary;
+      padding: 1.5rem 2rem;
+      display: block;
+      width: fit-content;
+      margin: 3rem auto;
+      text-transform: uppercase;
+    }
+  }
 }

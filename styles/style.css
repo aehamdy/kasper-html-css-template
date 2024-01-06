@@ -369,4 +369,77 @@ ul {
   margin-right: 2rem;
   position: relative;
   top: 1px;
+}
+.section-portfolio {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.section-portfolio__list {
+  display: flex;
+  justify-content: center;
+}
+.section-portfolio__listItem {
+  padding: 1rem;
+  text-transform: capitalize;
+}
+.section-portfolio__listItem--active {
+  color: #fff;
+  background-color: #19c8fa;
+}
+.section-portfolio__images-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 6rem;
+}
+.section-portfolio__box {
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .section-portfolio__box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1199px) {
+  .section-portfolio__box {
+    flex-basis: 25%;
+  }
+}
+.section-portfolio__box:hover .section-portfolio__caption {
+  bottom: 0;
+}
+.section-portfolio__box:hover .section-portfolio__img {
+  transform: rotate(3deg) scale(1.1);
+}
+.section-portfolio__img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+.section-portfolio__caption {
+  position: absolute;
+  padding: 2rem;
+  background-color: #fff;
+  width: 100%;
+  left: 0;
+  bottom: -100%;
+  transition: 0.3s;
+}
+.section-portfolio__heading {
+  margin-bottom: 1rem;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+.section-portfolio__description {
+  color: #19c8fa;
+  text-transform: capitalize;
+}
+.section-portfolio__link {
+  color: #fff;
+  background-color: #19c8fa;
+  padding: 1.5rem 2rem;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 3rem auto;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
