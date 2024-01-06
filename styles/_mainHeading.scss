@@ -1,0 +1,44 @@
+@import "./variables";
+.main-heading {
+  text-align: center;
+
+  &__title {
+    position: relative;
+    font-size: 4rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 7rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -3rem;
+      height: 0.2rem;
+      width: 12rem;
+      background-color: #333;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -3.8rem;
+      width: 1.4rem;
+      height: 1.4rem;
+      border-radius: 50%;
+      border: 1px solid #333;
+      background-color: $color-white;
+    }
+  }
+
+  &__description {
+    width: 55rem;
+    margin: 0 auto 10rem;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
+  }
+}
