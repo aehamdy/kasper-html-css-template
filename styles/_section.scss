@@ -1,0 +1,100 @@
+@import "./variables";
+
+.section {
+  &-landing {
+    min-height: 100vh;
+    background-color: #1f2021;
+    background-image: url("../assets/landing.jpg");
+    block-size: cover;
+    position: relative;
+  }
+
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+  }
+
+  &__text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    padding: 5rem;
+    background-color: $color-primary-transparent;
+    color: $color-white;
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    max-width: 45rem;
+
+    @media (max-width: 767px) {
+      max-width: 90%;
+      margin-inline: auto;
+    }
+  }
+
+  &__heading {
+    font-size: 3.2rem;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    line-height: 2;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ddd;
+    cursor: pointer;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &__arrow--left {
+    left: 3rem;
+  }
+
+  &__arrow--right {
+    right: 3rem;
+  }
+
+  &__bullets {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__bullet {
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    border: 1px solid $color-white;
+    cursor: pointer;
+  }
+
+  &__bullet--active {
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+}
