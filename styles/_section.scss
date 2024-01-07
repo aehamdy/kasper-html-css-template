@@ -320,4 +320,23 @@
       text-transform: uppercase;
     }
   }
+
+  &-about {
+    padding-top: $section-padding;
+    overflow: hidden;
+    text-align: center;
+
+    &__image {
+      position: relative;
+      bottom: -12rem;
+      margin-top: -12rem;
+      max-width: 100%;
+
+      @media (max-width: 767px) {
+        bottom: -6rem;
+        margin-top: -6rem;
+        margin-inline: auto;
+      }
+    }
+  }
 }

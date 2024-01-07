@@ -492,4 +492,22 @@ ul {
   color: #fff;
   padding: 1rem 2rem;
   text-transform: uppercase;
+}
+.section-about {
+  padding-top: 10rem;
+  overflow: hidden;
+  text-align: center;
+}
+.section-about__image {
+  position: relative;
+  bottom: -12rem;
+  margin-top: -12rem;
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .section-about__image {
+    bottom: -6rem;
+    margin-top: -6rem;
+    margin-inline: auto;
+  }
 }/*# sourceMappingURL=style.css.map */
