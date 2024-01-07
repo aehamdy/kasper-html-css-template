@@ -314,7 +314,7 @@
     }
 
     &__button {
-      background-color: #000;
+      background-color: $color-black;
       color: $color-white;
       padding: 1rem 2rem;
       text-transform: uppercase;
@@ -337,6 +337,65 @@
         margin-top: -6rem;
         margin-inline: auto;
       }
+    }
+  }
+
+  &-stats {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    text-align: center;
+    background-image: url(../assets/stats.png);
+    background-size: cover;
+    position: relative;
+
+    &::before {
+      content: "";
+      @include bg-overlay(rgb(0 0 0 / 70%));
+    }
+
+    &__container {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__box {
+      color: $color-white;
+      padding: 5rem;
+      background-color: $color-primary-transparent;
+
+      @media (max-width: 767px) {
+        flex-basis: 100%;
+      }
+
+      @media (min-width: 768px) {
+        flex-basis: 50%;
+      }
+
+      @media (min-width: 992px) {
+        flex-basis: 25%;
+      }
+    }
+
+    &__icon {
+      width: 4rem;
+      height: 4rem;
+      display: flex;
+      background-color: $color-black;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin: 0 auto 3rem;
+    }
+
+    &__number {
+      font-size: 4rem;
+      font-weight: bold;
+      margin: 0 0 2rem;
+    }
+
+    &__description {
+      font-size: 1.4rem;
     }
   }
 }
