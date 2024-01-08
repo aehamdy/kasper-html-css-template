@@ -1,3 +1,5 @@
+@import "./variables";
+
 @mixin bg-overlay($bg: rgba(0 0 0 / 60%)) {
   position: absolute;
   left: 0;
@@ -5,6 +7,12 @@
   width: 100%;
   height: 100%;
   background-color: $bg;
+}
+
+@mixin section-padding($sec-pad: $section-padding) {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  @content;
 }
 
 %section-heading {

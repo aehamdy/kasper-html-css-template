@@ -92,8 +92,7 @@
   }
 
   &-services {
-    padding-top: $section-padding;
-    padding-bottom: $section-padding;
+    @include section-padding;
 
     &__container {
       @media (min-width: 768px) {
@@ -134,8 +133,7 @@
   }
 
   &-design {
-    padding-top: $section-padding;
-    padding-bottom: $section-padding;
+    @include section-padding;
     height: 60rem;
     position: relative;
     background-image: url("../assets/design-features.jpg");
@@ -190,8 +188,7 @@
   }
 
   &-portfolio {
-    padding-top: $section-padding;
-    padding-bottom: $section-padding;
+    @include section-padding;
 
     &__list {
       display: flex;
@@ -322,7 +319,9 @@
   }
 
   &-about {
-    padding-top: $section-padding;
+    @include section-padding() {
+      padding-bottom: 0;
+    }
     overflow: hidden;
     text-align: center;
 
@@ -341,8 +340,7 @@
   }
 
   &-stats {
-    padding-top: $section-padding;
-    padding-bottom: $section-padding;
+    @include section-padding;
     text-align: center;
     background-image: url(../assets/stats.png);
     background-size: cover;
@@ -396,6 +394,133 @@
 
     &__description {
       font-size: 1.4rem;
+    }
+  }
+
+  &-our-skills {
+    @include section-padding;
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      > div {
+        @media (min-width: 992px) {
+          flex-basis: 45%;
+        }
+
+        > h3 {
+          margin: 0 0 3rem;
+          font-weight: normal;
+          text-align: center;
+          text-transform: uppercase;
+        }
+
+        > p {
+          color: $color-grey;
+          line-height: 2;
+          text-align: center;
+          margin-bottom: 6rem;
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3rem;
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    &__image {
+      width: 10rem;
+      border-radius: 50%;
+      margin-right: 5rem;
+
+      @media (max-width: 767px) {
+        margin: 0 auto 2rem;
+      }
+    }
+
+    &__text {
+      line-height: 1.8;
+      border-bottom: 0.1rem solid #ccc;
+    }
+
+    &__description {
+      color: $color-grey;
+      text-align: right;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    &__bullets {
+      display: flex;
+      justify-content: center;
+      margin: 5rem 0;
+    }
+
+    &__bullet {
+      width: 1.4rem;
+      height: 1.4rem;
+      border: 0.1rem solid #aaa;
+      border-radius: 50%;
+      margin-inline-end: 1rem;
+
+      &--active {
+        background-color: $color-primary;
+        border-color: $color-primary;
+      }
+    }
+
+    &__prog-holder {
+      margin-bottom: 4rem;
+    }
+
+    &__title {
+      margin-bottom: 1.5rem;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    &__prog {
+      background-color: #dedadc;
+      height: 3rem;
+
+      > span {
+        display: block;
+        background-color: $color-primary;
+        height: 100%;
+        position: relative;
+
+        &::before {
+          content: attr(data-progress);
+          position: absolute;
+          background-color: $color-black;
+          color: $color-white;
+          top: -4rem;
+          right: -1.8rem;
+          padding: 0.4rem 0;
+          width: 4rem;
+          text-align: center;
+          border-radius: 0.4rem;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          border-style: solid;
+          border-width: 0.8rem;
+          border-color: $color-black transparent transparent;
+          right: -0.8rem;
+          top: -1.5rem;
+        }
+      }
     }
   }
 }
