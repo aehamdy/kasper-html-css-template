@@ -660,4 +660,80 @@
       padding: 1.5rem 3rem;
     }
   }
+
+  &-subscribe {
+    @include section-padding;
+    background-image: url("../assets/subscribe.jpg");
+    background-size: cover;
+    position: relative;
+    color: $color-white;
+
+    &::before {
+      content: "";
+      @include bg-overlay(rgb(0 0 0 / 50%));
+    }
+
+    &__container {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 991px) {
+        flex-direction: column;
+      }
+    }
+
+    &__form {
+      display: flex;
+      position: relative;
+      width: 50rem;
+      max-width: 100%;
+
+      > input[type="email"] {
+        border: 1px solid $color-white;
+        border-right: none;
+        background: none;
+        padding: 2rem 2rem 2rem 6rem;
+        caret-color: $color-primary;
+        width: calc(100% - 13rem);
+      }
+
+      > input[type="submit"] {
+        width: 13rem;
+        background-color: $color-primary;
+        color: $color-white;
+        padding: 1rem 2rem;
+        border: 1px solid $color-white;
+        border-left: none;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      > input[type="email"]:focus,
+      input[type="submit"]:focus {
+        outline: none;
+      }
+
+      & ::placeholder {
+        color: $color-white;
+      }
+    }
+
+    &__icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 2.5rem;
+    }
+
+    &__description {
+      line-height: 2;
+      margin-left: 5rem;
+      text-align: center;
+
+      @media (max-width: 991px) {
+        margin: 3rem 0 0;
+      }
+    }
+  }
 }
