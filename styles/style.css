@@ -684,4 +684,41 @@ ul {
   border-color: #000 transparent transparent;
   right: -0.8rem;
   top: -1.5rem;
+}
+.section-quote {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-image: url(../assets/quote.jpg);
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+.section-quote::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.section-quote__container {
+  position: relative;
+}
+.section-quote__quote {
+  position: relative;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  display: block;
+}
+.section-quote__quote::before {
+  content: "\f10d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.section-quote__quote::after {
+  content: "\f10e";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }/*# sourceMappingURL=style.css.map */

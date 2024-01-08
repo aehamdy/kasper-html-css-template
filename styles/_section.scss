@@ -523,4 +523,41 @@
       }
     }
   }
+
+  &-quote {
+    @include section-padding;
+    background-image: url(../assets/quote.jpg);
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: $color-white;
+
+    &::before {
+      content: "";
+      @include bg-overlay(rgb(0 0 0 / 75%));
+    }
+
+    &__container {
+      position: relative;
+    }
+
+    &__quote {
+      position: relative;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      display: block;
+
+      &::before {
+        content: "\f10d";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+      }
+
+      &::after {
+        content: "\f10e";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+      }
+    }
+  }
 }
