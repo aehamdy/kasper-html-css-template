@@ -549,15 +549,115 @@
 
       &::before {
         content: "\f10d";
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
       }
 
       &::after {
         content: "\f10e";
+      }
+
+      &::before,
+      &::after {
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
       }
+    }
+  }
+
+  &-pricing {
+    @include section-padding;
+
+    &__plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+      gap: 3rem;
+    }
+
+    &__plan {
+      background-color: #fcfcfc;
+      text-align: center;
+    }
+
+    &__planHead {
+      padding: 4rem 2rem;
+      border-top: 0.1rem solid $color-primary;
+      border-bottom: 0.1rem solid $color-primary;
+    }
+
+    &__planHeading {
+      font-weight: normal;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+
+    &__planPrice {
+      font-size: 6rem;
+      font-weight: bold;
+
+      &::before {
+        content: "$";
+        position: relative;
+        font-size: 2.5rem;
+        font-weight: normal;
+        top: -4rem;
+        margin-right: 1.5rem;
+      }
+
+      &::after {
+        content: "/Mo";
+        position: relative;
+        font-size: 2.5rem;
+        right: -1.5rem;
+      }
+    }
+
+    &__list {
+      border-bottom: 0.1rem solid $color-primary;
+    }
+
+    &__listItem {
+      padding: 2rem;
+      position: relative;
+
+      &:not(:last-child)::after {
+        content: "";
+        width: 12rem;
+        height: 0.1rem;
+        background-color: $color-primary;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+      }
+    }
+
+    &__planButton {
+      display: block;
+      padding: 1rem 2rem;
+      border: 0.1rem solid $color-primary;
+      width: fit-content;
+      margin: 3rem auto;
+      transition: $transition-duration;
+
+      &:hover {
+        color: $color-white;
+        background-color: $color-primary;
+        padding: 1.5rem 3rem;
+      }
+    }
+
+    &__description {
+      text-align: center;
+      margin: 5rem auto 2rem;
+      font-size: 2rem;
+    }
+
+    &__link {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto;
+      background-color: $color-primary;
+      color: $color-white;
+      padding: 1.5rem 3rem;
     }
   }
 }

@@ -714,11 +714,97 @@ ul {
 }
 .section-quote__quote::before {
   content: "\f10d";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
 }
 .section-quote__quote::after {
   content: "\f10e";
+}
+.section-quote__quote::before, .section-quote__quote::after {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
+}
+.section-pricing {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.section-pricing__plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  gap: 3rem;
+}
+.section-pricing__plan {
+  background-color: #fcfcfc;
+  text-align: center;
+}
+.section-pricing__planHead {
+  padding: 4rem 2rem;
+  border-top: 0.1rem solid #19c8fa;
+  border-bottom: 0.1rem solid #19c8fa;
+}
+.section-pricing__planHeading {
+  font-weight: normal;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+.section-pricing__planPrice {
+  font-size: 6rem;
+  font-weight: bold;
+}
+.section-pricing__planPrice::before {
+  content: "$";
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: normal;
+  top: -4rem;
+  margin-right: 1.5rem;
+}
+.section-pricing__planPrice::after {
+  content: "/Mo";
+  position: relative;
+  font-size: 2.5rem;
+  right: -1.5rem;
+}
+.section-pricing__list {
+  border-bottom: 0.1rem solid #19c8fa;
+}
+.section-pricing__listItem {
+  padding: 2rem;
+  position: relative;
+}
+.section-pricing__listItem:not(:last-child)::after {
+  content: "";
+  width: 12rem;
+  height: 0.1rem;
+  background-color: #19c8fa;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.section-pricing__planButton {
+  display: block;
+  padding: 1rem 2rem;
+  border: 0.1rem solid #19c8fa;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 3rem auto;
+  transition: 0.3s;
+}
+.section-pricing__planButton:hover {
+  color: #fff;
+  background-color: #19c8fa;
+  padding: 1.5rem 3rem;
+}
+.section-pricing__description {
+  text-align: center;
+  margin: 5rem auto 2rem;
+  font-size: 2rem;
+}
+.section-pricing__link {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2rem auto;
+  background-color: #19c8fa;
+  color: #fff;
+  padding: 1.5rem 3rem;
 }/*# sourceMappingURL=style.css.map */
