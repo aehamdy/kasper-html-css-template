@@ -736,4 +736,87 @@
       }
     }
   }
+
+  &-contact {
+    @include section-padding;
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+    }
+
+    &__form {
+      flex-basis: 70%;
+    }
+
+    &__main-input {
+      display: block;
+      padding: 2rem;
+      border: 0.1rem solid #ccc;
+      margin-bottom: 3rem;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__textarea {
+      height: 20rem;
+    }
+
+    &__submit {
+      background-color: $color-primary;
+      color: $color-white;
+      padding: 2rem;
+      display: flex;
+      margin-left: auto;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+    }
+
+    &__info {
+      flex-basis: 25%;
+
+      @media (max-width: 767px) {
+        order: -1;
+        text-align: center;
+      }
+    }
+
+    &__heading {
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      font-weight: bold;
+      font-size: 1.8rem;
+    }
+
+    &__heading:nth-of-type(2) {
+      margin-top: 7rem;
+
+      @media (max-width: 767px) {
+        margin-top: 3rem;
+      }
+    }
+
+    &__phone {
+      display: block;
+      color: $color-grey;
+      margin-bottom: 1rem;
+    }
+
+    &__address {
+      color: $color-grey;
+      line-height: 2;
+
+      @media (max-width: 767px) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
 }
