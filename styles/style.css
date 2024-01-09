@@ -960,4 +960,49 @@ ul {
   .section-contact__address {
     margin-bottom: 4rem;
   }
+}
+
+.footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-image: url(../assets/subscribe.jpg);
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.footer__container {
+  position: relative;
+}
+.footer__container > p:not(.footer__copyright) {
+  text-transform: uppercase;
+  padding: 2rem;
+  border-bottom: 0.1rem solid #fff;
+  font-size: 2.2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2rem auto;
+}
+.footer__logo {
+  margin-bottom: 2rem;
+}
+.footer__icon {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+.footer__copyright {
+  margin-top: 6rem;
+}
+.footer__copyright > span {
+  font-weight: bold;
+  color: #19c8fa;
 }/*# sourceMappingURL=style.css.map */

@@ -10,8 +10,8 @@
 }
 
 @mixin section-padding($sec-pad: $section-padding) {
-  padding-top: $section-padding;
-  padding-bottom: $section-padding;
+  padding-top: $sec-pad;
+  padding-bottom: $sec-pad;
   @content;
 }
 

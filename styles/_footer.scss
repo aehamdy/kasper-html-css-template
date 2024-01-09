@@ -1,0 +1,46 @@
+@import "./variables";
+@import "./mixins";
+
+.footer {
+  @include section-padding($sec-pad: $section-padding/2);
+  background-image: url(../assets/subscribe.jpg);
+  background-size: cover;
+  position: relative;
+  color: $color-white;
+  text-align: center;
+
+  &::before {
+    content: "";
+    @include bg-overlay(rgb(0 0 0 / 70%));
+  }
+
+  &__container {
+    position: relative;
+
+    > p:not(.footer__copyright) {
+      text-transform: uppercase;
+      padding: 2rem;
+      border-bottom: 0.1rem solid $color-white;
+      font-size: 2.2rem;
+      width: fit-content;
+      margin: 2rem auto;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 2rem;
+  }
+
+  &__icon {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+  }
+
+  &__copyright {
+    margin-top: 6rem;
+    > span {
+      font-weight: bold;
+      color: $color_primary;
+    }
+  }
+}
